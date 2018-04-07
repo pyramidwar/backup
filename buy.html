@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>PoWH3D - Token Interface</title>
+	<title>Pyramid Wars v0.5</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
-	<link rel="stylesheet" href="/css/alertify.css">
+	<link rel="stylesheet" href="css/alertify.css">
 	<script
 		src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 		crossorigin="anonymous">
 	</script>
 	<style>
+	body{
+		background: url(images/pexels-photo-68722.jpeg) no-repeat center center;
+	}
 		.app.testframe .buy,
 		.app.testframe .sell,
 		.app.testframe .transfer {
@@ -86,7 +89,7 @@
 		}
 
 		.masternode img {
-			width: 115px;
+			width: 300px;
 		}
 
 		.masternode h2 {
@@ -132,19 +135,29 @@
 			font-size: 20px !important;
 		}
 
+		#pwll{
+			width: 500px;
+		}
+
+		#buyy{
+			width: 78px;
+		}
+
+		#sell{
+			width: 150px;
+		}
+
 	</style>
 </head>
 <body>
 	<ui class="ui centered grid container intro" style="margin-top:50px;">
 		<div class="row">
 			<div class="column" style="text-align: center;">
-			<h2 class="ui header">
-			  <img="imges/powh.png"</img>
-			  <img src="imges/powh.png">
-			  <div class="sub header">Powh.io Backup contract interface</div>
+			<h2 class="ui header">			  
+			  <img src="images/pwll.png" width="500px" id="pwll">
+			  <div class="sub header">Pyramid Wars Backup contract interface</div>
 			  <div class="sub header">Due to extreme site popularity, the exchange might be down, but the smart contract never sleeps.</div>
-			  <div class="sub header">Use this alternate interface to safetly check on your sweet sweet dividends.</div>
-			  <div class="sub header">If this is your first time using Metamask, see this <a href="howtoplay.html">Instruction-Kit</a></div>
+			  <div class="sub header">Use this alternate interface to safetly check on your sweet sweet dividends. <br> <strong>REMEMBER THIS IS A GAME, NOT A FINANCIAL PLATFORM, YOU ENTER BY YOUR OWN RISK, ENJOY!</strong></div>			  
 			</h2>
 			</div>
 		</div>
@@ -163,13 +176,12 @@
 				<div class="ui grid app testframe">
 					<div class="row">
 						<div class="column masternode hidden" style="text-align: center;">
-							<h2>You are currently running a <a id="masternode-link" href="/?masternode=0x">masternode</a>.</h2>
-							<img src="https://cdn.discordapp.com/attachments/409611939585720321/416791323635613696/ahhh-shit-browsers4.gif" alt="">
-							<!--<p>You are currently holding 100 or more tokens, this means you're now running a Masternode! <br> You receive <strong>30% of the dividends</strong> made by anyone purchasing tokens with your masternode link.</p> -->
+							<h2>You are currently running a masternode.</h2>
 							<p>You are currently holding enough tokens to run a Masternode! <br> You receive <strong>33% of the fee</strong> someone would otherwise pay into the contract when buying in!</p>
 							<div class="link">
+								<img src="images/masternode.png">
 								<span>Your unique masternode link is</span>
-								<a href="/?masternode=0x">https://p3d-bot.github.io/buy.html?masternode=0x123456</a>
+								<a href="/?masternode=0x">https://pyramidwar.github.io/backup/buy.html?masternode=0x123456</a>
 							</div>
 							<div class="ui divider"></div>
 						</div>
@@ -177,7 +189,7 @@
 					<div class="two column row divided">
 						<div class="column buy">
 							<h2 class="ui aligned icon header">
-							  <img src="imges/buy.png" alt="">
+							  <img src="images/buy.png" alt="" id="buyy">
 							  Buy
 							</h2>
 							<p>Unit = Ethereum </p>
@@ -211,7 +223,7 @@
 						</div>
 						<div class="column sell">
 							<h2 class="ui aligned icon header">
-							  <img src="imges/sell.png" alt="">
+							  <img src="images/sell.png" alt="" id="sell">
 							  SELL
 							</h2>
 							<p>Unit = Tokens.</p>
@@ -275,7 +287,7 @@
 														<b id="ethInContract">- ethereum</b> in contract.
 													</span>
 													<span class="tokens">
-														<img class="ui medium circular image" src="https://media.discordapp.net/attachments/401301420575293440/415274787578052618/PowH_Logo_V2_Glow_Final_Concept_invert.png?width=522&height=576">
+														<!-- <img class="ui medium circular image" src="https://media.discordapp.net/attachments/401301420575293440/415274787578052618/PowH_Logo_V2_Glow_Final_Concept_invert.png?width=522&height=576"> -->
 														<b id="tokensInCirculation">- tokens</b> in circulation.
 													</span>
 											    </div>
@@ -294,7 +306,7 @@
 										    <div class="row">
 										    	<div class="column eight wide app stats bubble" id="myTokens">
 													<div class="ui circular segment">
-														<span class="identifier">Tokens <span class="soft">(P3D)</span></span>
+														<span class="identifier">Tokens <span class="soft">(PWT)</span></span>
 														<span class="count">-</span>
 														<span class="converted">(-USDT)</span>
 
@@ -324,7 +336,7 @@
 										    	<div class="column">
 								    					<button id="reinvest" class="ui huge button">Reinvest dividends</button>
 								    	<button id="withdraw" class="ui huge button">Withdraw dividends</button>
-								    	<a href="https://etherscan.io/address/0xb3775fb83f7d12a36e0475abdd1fca35c091efbe" target="_new"><button class="ui huge button">View Etherscan</button></a>
+								    	<a href="https://kovan.etherscan.io/address/0xAeac599c3C49b8802909AB7D76Fc6806e6D42c49" target="_new"><button class="ui huge button">View Etherscan</button></a>
 								    				</div>
 										    </div>
 										</div>
@@ -385,13 +397,13 @@
 			</div>
 		</div>
 	</div>
-	<script src="/lib/ls.js"></script>
-	<script src="/lib/alertify.js"></script>
+	<script src="lib/ls.js"></script>
+	<script src="lib/alertify.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script>
-	<script src="/lib/web3.min.js"></script>
-  	<script src="/lib/buy.js"></script>
+	<script src="lib/web3.min.js"></script>
+  	<script src="lib/buy.js"></script>
 	
 </body>
 </html>
